@@ -46,6 +46,11 @@
 
         //Resource for REST APIs
         this.doLogin = function(data) {
+          $http.defaults.useXDomain = true;
+          //Set headers
+          $http.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';
+          // Mifos set Tenant
+          $http.defaults.headers.common['Fineract-Platform-TenantId'] = 'default';
             return $resource(BASE_URL+'/self/authentication', data);
         }
 
