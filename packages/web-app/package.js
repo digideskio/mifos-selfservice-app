@@ -18,6 +18,7 @@ Package.onUse(function(api) {
   api.addFiles([
     'module.js',
     'auth/login.html',
+    'client/client.html',
     'main.html',    
     'styles/navbar.import.less',
     'styles/main.less'
